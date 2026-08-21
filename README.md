@@ -26,7 +26,7 @@ An all-in-one calculator web application built using HTML, CSS and JavaScript.
 
 ## Live Demo
 
-Visit the live project using GitHub Pages.
+https://omkar-sudo88.github.io/Smart-Calculator-/
 
 ## Author
 
