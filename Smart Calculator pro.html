@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Calculator Pro</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-icon">
+            ∑
+        </div>
+
+        <div>
+            <h2>Smart Calculator</h2>
+            <p>Pro Edition</p>
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <button class="side-btn active"
+                data-tab="dashboard">
+            Dashboard
+        </button>
+
+        <button class="side-btn"
+                data-tab="scientific">
+            Scientific
+        </button>
+
+        <button class="side-btn"
+                data-tab="percentage">
+            Percentage
+        </button>
+
+        <button class="side-btn"
+                data-tab="change">
+            % Change
+        </button>
+
+        <button class="side-btn"
+                data-tab="amount">
+            Amount
+        </button>
+
+        <button class="side-btn"
+                data-tab="marks">
+            10th Marks
+        </button>
+
+        <button class="side-btn"
+                data-tab="cgpa">
+            CGPA / SGPA
+        </button>
+
+        <button class="side-btn"
+                data-tab="emi">
+            EMI Calculator
+        </button>
+
+        <button class="side-btn"
+                data-tab="history">
+            History
+        </button>
+
+    </nav>
+
+
+    <div class="side-footer">
+        All-in-one calculation toolkit
+    </div>
+
+</aside>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="main">
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="top">
+
+    <div>
+
+        <h1>
+            Smart Calculator
+        </h1>
+
+        <p>
+            Powerful everyday calculators in one place
+        </p>
+
+    </div>
+
+
+    <button
+        id="themeBtn"
+        class="theme-btn">
+
+        ☾
+
+    </button>
+
+</header>
+
+
+
+<!-- ================= TOP TABS ================= -->
+
+<div class="tabs">
+
+    <button
+        class="tab active"
+        data-tab="dashboard">
+        Dashboard
+    </button>
+
+    <button
+        class="tab"
+        data-tab="scientific">
+        Scientific
+    </button>
+
+    <button
+        class="tab"
+        data-tab="percentage">
+        Percentage
+    </button>
+
+    <button
+        class="tab"
+        data-tab="change">
+        % Change
+    </button>
+
+    <button
+        class="tab"
+        data-tab="amount">
+        Amount
+    </button>
+
+    <button
+        class="tab"
+        data-tab="marks">
+        10th Marks
+    </button>
+
+    <button
+        class="tab"
+        data-tab="cgpa">
+        CGPA / SGPA
+    </button>
+
+    <button
+        class="tab"
+        data-tab="emi">
+        EMI
+    </button>
+
+    <button
+        class="tab"
+        data-tab="history">
+        History
+    </button>
+
+</div>
+
+
+
+<section class="content">
+
+
+<!-- ================================================= -->
+<!-- DASHBOARD -->
+<!-- ================================================= -->
+
+<section
+    class="panel active"
+    id="dashboard">
+
+    <div class="dashboard-head">
+
+        <h2>
+            Dashboard
+        </h2>
+
+        <p class="muted">
+            Choose a calculator to get started.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <button
+            class="feature"
+            data-open="scientific">
+
+            <span>🧮</span>
+
+            <b>
+                Scientific
+            </b>
+
+            <small>
+                Advanced calculations
+            </small>
+
+        </button>
+
+
+        <button
+            class="feature"
+            data-open="percentage">
+
+            <span>％</span>
+
+            <b>
+                Percentage
+            </b>
+
+            <small>
+                Percentage of a number
+            </small>
+
+        </button>
+
+
+        <button
+            class="feature"
+            data-open="amount">
+
+            <span>₹</span>
+
+            <b>
+                Amount
+            </b>
+
+            <small>
+                Discount + GST
+            </small>
+
+        </button>
+
+
+        <button
+            class="feature"
+            data-open="marks">
+
+            <span>🎓</span>
+
+            <b>
+                10th Marks
+            </b>
+
+            <small>
+                Total and percentage
+            </small>
+
+        </button>
+
+
+        <button
+            class="feature"
+            data-open="cgpa">
+
+            <span>📊</span>
+
+            <b>
+                CGPA / SGPA
+            </b>
+
+            <small>
+                Grade-point calculation
+            </small>
+
+        </button>
+
+
+        <button
+            class="feature"
+            data-open="emi">
+
+            <span>🏦</span>
+
+            <b>
+                EMI
+            </b>
+
+            <small>
+                Loan payment estimate
+            </small>
+
+        </button>
+
+    </div>
+
+
+    <div class="stats">
+
+        <div class="stat">
+
+            <span>
+                Total History
+            </span>
+
+            <b id="dashHistory">
+                0
+            </b>
+
+        </div>
+
+
+        <div class="stat">
+
+            <span>
+                Last Calculation
+            </span>
+
+            <b id="dashLast">
+                None
+            </b>
+
+        </div>
+
+
+        <div class="stat">
+
+            <span>
+                Theme
+            </span>
+
+            <b id="dashTheme">
+                Light
+            </b>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- SCIENTIFIC CALCULATOR -->
+<!-- ================================================= -->
+
+<section
+    class="panel"
+    id="scientific">
+
+    <div class="card calculator-card">
+
+        <h2>
+            Scientific Calculator
+        </h2>
+
+        <p class="muted">
+            Use keyboard or buttons.
+        </p>
+
+
+        <div class="sci-display">
+
+            <div id="sciExpression">
+                0
+            </div>
+
+            <div id="sciResult">
+                0
+            </div>
+
+        </div>
+
+
+        <div class="sci-grid">
+
+            <button
+                class="key fn"
+                data-action="clear">
+                AC
+            </button>
+
+            <button
+                class="key fn"
+                data-action="back">
+                ⌫
+            </button>
+
+            <button
+                class="key fn"
+                data-value="(">
+                (
+            </button>
+
+            <button
+                class="key fn"
+                data-value=")">
+                )
+            </button>
+
+
+            <button
+                class="key fn"
+                data-value="sqrt(">
+                √
+            </button>
+
+            <button
+                class="key fn"
+                data-value="sin(">
+                sin
+            </button>
+
+            <button
+                class="key fn"
+                data-value="cos(">
+                cos
+            </button>
+
+            <button
+                class="key op"
+                data-value="/">
+                ÷
+            </button>
+
+
+            <button
+                class="key"
+                data-value="7">
+                7
+            </button>
+
+            <button
+                class="key"
+                data-value="8">
+                8
+            </button>
+
+            <button
+                class="key"
+                data-value="9">
+                9
+            </button>
+
+            <button
+                class="key op"
+                data-value="*">
+                ×
+            </button>
+
+
+            <button
+                class="key"
+                data-value="4">
+                4
+            </button>
+
+            <button
+                class="key"
+                data-value="5">
+                5
+            </button>
+
+            <button
+                class="key"
+                data-value="6">
+                6
+            </button>
+
+            <button
+                class="key op"
+                data-value="-">
+                −
+            </button>
+
+
+            <button
+                class="key"
+                data-value="1">
+                1
+            </button>
+
+            <button
+                class="key"
+                data-value="2">
+                2
+            </button>
+
+            <button
+                class="key"
+                data-value="3">
+                3
+            </button>
+
+            <button
+                class="key op"
+                data-value="+">
+                +
+            </button>
+
+
+            <button
+                class="key"
+                data-value="0">
+                0
+            </button>
+
+            <button
+                class="key"
+                data-value=".">
+                .
+            </button>
+
+            <button
+                class="key fn"
+                data-value="Math.PI">
+                π
+            </button>
+
+            <button
+                class="key equal"
+                data-action="equals">
+                =
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- PERCENTAGE -->
+<!-- ================================================= -->
+
+<section
+    class="panel"
+    id="percentage">
+
+    <div class="card calculator-card">
+
+        <h2>
+            Percentage Calculator
+        </h2>
+
+        <p class="muted">
+            Find a percentage of a number.
+        </p>
+
+
+        <form id="percentageForm">
+
+            <label>
+
+                Percentage
+
+                <input
+                    id="percentValue"
+                    type="number"
+                    step="any"
+                    placeholder="20"
+                    required>
+
+            </label>
+
+
+            <label>
+
+                Number
+
+                <input
+                    id="percentBase"
+                    type="number"
+                    step="any"
+                    placeholder="500"
+                    required>
+
+            </label>
+
+
+            <button
+                class="primary">
+
+                Calculate
+
+            </button>
+
+        </form>
+
+
+        <div
+            class="result"
+            id="percentageResult">
+
+            Your result will appear here.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- % CHANGE -->
+<!-- ================================================= -->
+
+<section
+    class="panel"
+    id="change">
+
+    <div class="card calculator-card">
+
+        <h2>
+            Percentage Change
+        </h2>
+
+        <p class="muted">
+            Calculate increase or decrease.
+        </p>
+
+
+        <form id="changeForm">
+
+            <label>
+
+                Old Value
+
+                <input
+                    id="oldValue"
+                    type="number"
+                    step="any"
+                    required>
+
+            </label>
+
+
+            <label>
+
+                New Value
+
+                <input
+                    id="newValue"
+                    type="number"
+                    step="any"
+                    required>
+
+            </label>
+
+
+            <button
+                class="primary">
+
+                Calculate Change
+
+            </button>
+
+        </form>
+
+
+        <div
+            class="result"
+            id="changeResult">
+
+            Your result will appear here.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- AMOUNT -->
+<!-- ================================================= -->
+
+<section
+    class="panel"
+    id="amount">
+
+    <div class="card calculator-card">
+
+        <h2>
+            Amount Calculator
+        </h2>
+
+        <p class="muted">
+            Discount and GST calculation.
+        </p>
+
+
+        <form id="amountForm">
+
+            <label>
+
+                Original Amount
+
+                <input
+                    id="amountValue"
+                    type="number"
+                    min="0"
+                    step="any"
+                    required>
+
+            </label>
+
+
+            <div class="grid-2">
+
+                <label>
+
+                    Discount %
+
+                    <input
+                        id="discount"
+                        type="number"
+                        min="0"
+                        value="0">
+
+                </label>
+
+
+                <label>
+
+                    GST %
+
+                    <input
+                        id="gst"
+                        type="number"
+                        min="0"
+                        value="0">
+
+                </label>
+
+            </div>
+
+
+            <button
+                class="primary">
+
+                Calculate Amount
+
+            </button>
+
+        </form>
+
+
+        <div
+            class="amount-result"
+            id="amountResult">
+
+            <div>
+                <span>Discount</span>
+                <strong>₹0.00</strong>
+            </div>
+
+            <div>
+                <span>After Discount</span>
+                <strong>₹0.00</strong>
+            </div>
+
+            <div>
+                <span>GST</span>
+                <strong>₹0.00</strong>
+            </div>
+
+            <div class="total">
+                <span>Final Amount</span>
+                <strong>₹0.00</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- 10TH MARKS -->
+<!-- ================================================= -->
+
+<section
+    class="panel"
+    id="marks">
+
+    <div class="card calculator-card">
+
+        <h2>
+            10th Marks Calculator
+        </h2>
+
+        <p class="muted">
+            Enter six subject marks.
+        </p>
+
+
+        <form id="marksForm">
+
+            <div class="marks-grid">
+
+                <label>
+                    English
+                    <input
+                        class="mark"
+                        type="number"
+                        min="0"
+                        max="100"
+                        required>
+                </label>
+
+
+                <label>
+                    Marathi / Hindi
+                    <input
+                        class="mark"
+                        type="number"
+                        min="0"
+                        max="100"
+                        required>
+                </label>
+
+
+                <label>
+                    Mathematics
+                    <input
+                        class="mark"
+                        type="number"
+                        min="0"
+                        max="100"
+                        required>
+                </label>
+
+
+                <label>
+                    Science
+                    <input
+                        class="mark"
+                        type="number"
+                        min="0"
+                        max="100"
+                        required>
+                </label>
+
+
+                <label>
+                    Social Science
+                    <input
+                        class="mark"
+                        type="number"
+                        min="0"
+                        max="100"
+                        required>
+                </label>
+
+
+                <label>
+                    Optional Subject
+                    <input
+                        class="mark"
+                        type="number"
+                        min="0"
+                        max="100"
+                        required>
+                </label>
+
+            </div>
+
+
+            <button
+                class="primary">
+
+                Calculate Marks
+
+            </button>
+
+        </form>
+
+
+        <div class="marks-result">
+
+            <div
+                class="big-number"
+                id="marksPercent">
+                0%
+            </div>
+
+
+            <div class="marks-stats">
+
+                <span>
+                    Total:
+                    <b id="marksTotal">
+                        0
+                    </b>/600
+                </span>
+
+
+                <span>
+                    Average:
+                    <b id="marksAverage">
+                        0
+                    </b>
+                </span>
+
+            </div>
+
+
+            <div class="progress">
+
+                <div id="marksBar"></div>
+
+            </div>
+
+
+            <p id="marksMessage">
+                Enter marks to see your result.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- CGPA / SGPA -->
+<!-- ================================================= -->
+
+<section
+    class="panel"
+    id="cgpa">
+
+    <div class="card calculator-card">
+
+        <h2>
+            CGPA / SGPA Calculator
+        </h2>
+
+        <p class="muted">
+            Enter grade points and credits for each subject.
+        </p>
+
+
+        <div
+            id="cgpaRows"
+            class="cgpa-rows">
+        </div>
+
+
+        <div class="inline-actions">
+
+            <button
+                class="secondary"
+                id="addSubject">
+
+                + Add Subject
+
+            </button>
+
+
+            <button
+                class="primary"
+                id="calcCgpa">
+
+                Calculate CGPA
+
+            </button>
+
+        </div>
+
+
+        <div
+            class="result"
+            id="cgpaResult">
+
+            Your CGPA / SGPA will appear here.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- EMI -->
+<!-- ================================================= -->
+
+<section
+    class="panel"
+    id="emi">
+
+    <div class="card calculator-card">
+
+        <h2>
+            EMI Calculator
+        </h2>
+
+        <p class="muted">
+            Estimate your monthly loan payment.
+        </p>
+
+
+        <form id="emiForm">
+
+            <label>
+
+                Loan Amount (₹)
+
+                <input
+                    id="loanAmount"
+                    type="number"
+                    min="0"
+                    step="any"
+                    required
+                    placeholder="500000">
+
+            </label>
+
+
+            <div class="grid-2">
+
+                <label>
+
+                    Annual Interest %
+
+                    <input
+                        id="interest"
+                        type="number"
+                        min="0"
+                        step="any"
+                        required
+                        placeholder="8.5">
+
+                </label>
+
+
+                <label>
+
+                    Tenure (Years)
+
+                    <input
+                        id="tenure"
+                        type="number"
+                        min="1"
+                        step="1"
+                        required
+                        placeholder="5">
+
+                </label>
+
+            </div>
+
+
+            <button
+                class="primary">
+
+                Calculate EMI
+
+            </button>
+
+        </form>
+
+
+        <div
+            class="emi-result"
+            id="emiResult">
+
+            <div>
+                <span>Monthly EMI</span>
+                <strong>₹0.00</strong>
+            </div>
+
+            <div>
+                <span>Total Interest</span>
+                <strong>₹0.00</strong>
+            </div>
+
+            <div class="total">
+                <span>Total Payment</span>
+                <strong>₹0.00</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- HISTORY -->
+<!-- ================================================= -->
+
+<section
+    class="panel"
+    id="history">
+
+    <div class="card calculator-card">
+
+        <div class="history-head">
+
+            <div>
+
+                <h2>
+                    Calculation History
+                </h2>
+
+                <p class="muted">
+                    Saved locally on this device.
+                </p>
+
+            </div>
+
+
+            <button
+                id="clearHistory"
+                class="danger">
+
+                Clear All
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="historyList"
+            class="history-list">
+
+            <div class="empty">
+                No calculations yet.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</section>
+
+
+<footer>
+    © 2026 Smart Calculator Pro
+</footer>
+
+
+</main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
