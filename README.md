@@ -30,4 +30,12 @@ https://omkar-sudo88.github.io/Smart-Calculator-/
 
 ## Author
 
-Onkar
+Omkar Rathod
+
+Contact Us in instagram 
+
+https://www.instagram.com/omkaarrr_1703/ 
+
+Begginer Friendly Application 
+
+Give Me star to Motivate To Make Some Project 
